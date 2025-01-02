@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unravel/pages/cipher.dart';
 import 'package:unravel/pages/qr_code_generator.dart';
 import 'package:unravel/pages/qr_code_reader.dart';
 
@@ -50,6 +51,8 @@ class HomeScreen extends StatelessWidget {
         return const QRVieweReader();
       case 1:
         return const QRGenerator();
+      case 2:
+        return const CipherPage();
       default:
         return const HomeScreen();
     }
@@ -63,7 +66,7 @@ class HomeScreen extends StatelessWidget {
       case 1:
         return Icons.qr_code;
       case 2:
-        return Icons.home;
+        return Icons.code;
       case 3:
         return Icons.settings;
       case 4:
@@ -89,7 +92,7 @@ class HomeScreen extends StatelessWidget {
       case 1:
         return 'QR Generator';
       case 2:
-        return 'Home';
+        return 'Cipher Page';
       case 3:
         return 'Settings';
       case 4:
