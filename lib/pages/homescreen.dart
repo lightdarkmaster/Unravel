@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
       case 2:
         return const CipherPage();
       case 3:
-        return BinaryToWordPage();
+        return const BinaryToWordPage();
       default:
         return const HomeScreen();
     }
@@ -96,7 +96,7 @@ class HomeScreen extends StatelessWidget {
       case 1:
         return 'QR Generator';
       case 2:
-        return 'Cipher Page';
+        return 'Cipher';
       case 3:
         return 'Binary';
       case 4:
