@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:unravel/pages/binary_to_word.dart';
 import 'package:unravel/pages/cipher.dart';
 import 'package:unravel/pages/qr_code_generator.dart';
 import 'package:unravel/pages/qr_code_reader.dart';
@@ -53,6 +55,8 @@ class HomeScreen extends StatelessWidget {
         return const QRGenerator();
       case 2:
         return const CipherPage();
+      case 3:
+        return BinaryToWordPage();
       default:
         return const HomeScreen();
     }
@@ -68,7 +72,7 @@ class HomeScreen extends StatelessWidget {
       case 2:
         return Icons.code;
       case 3:
-        return Icons.settings;
+        return Icons.terminal_outlined;
       case 4:
         return Icons.person;
       case 5:
@@ -94,7 +98,7 @@ class HomeScreen extends StatelessWidget {
       case 2:
         return 'Cipher Page';
       case 3:
-        return 'Settings';
+        return 'Binary';
       case 4:
         return 'Profile';
       case 5:
