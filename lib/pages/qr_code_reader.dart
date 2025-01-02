@@ -28,7 +28,7 @@ class _QRVieweReaderState extends State<QRVieweReader> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('QR Code Scanner'),
+        title: const Text('QR Code Scanner', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.deepPurple,
       ),
       body: Column(
@@ -88,7 +88,7 @@ class _QRVieweReaderState extends State<QRVieweReader> {
                       )
                     : const Text(
                         'Scan a code',
-                        style: TextStyle(fontSize: 18.0),
+                        style: TextStyle(fontSize: 18.0, color: Colors.white),
                       ),
               ),
             ),
