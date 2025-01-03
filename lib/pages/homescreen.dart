@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:unravel/pages/binary_to_word.dart';
 import 'package:unravel/pages/cipher.dart';
+import 'package:unravel/pages/programmer_cal.dart';
 import 'package:unravel/pages/qr_code_generator.dart';
 import 'package:unravel/pages/qr_code_reader.dart';
 
@@ -16,28 +16,35 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.deepPurple,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(2.0),
         child: GridView.count(
           crossAxisCount: 3,
           children: List.generate(9, (index) {
-            return GestureDetector(
-              onTap: () {
-                // Navigate to different pages based on index
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => getPage(index)),
-                );
-              },
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    getIcon(index), // Use different icons
-                    size: 50.0,
+            return Padding(
+              padding: const EdgeInsets.all(5.0), // Add padding around each card
+              child: GestureDetector(
+                onTap: () {
+                  // Navigate to different pages based on index
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => getPage(index)),
+                  );
+                },
+                child: Card(
+                  elevation: 4.0,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        getImagePath(index), // Use different images
+                        width: 50.0,
+                        height: 50.0,
+                      ),
+                      const SizedBox(height: 8.0),
+                      Text(getLabel(index)), // Use different labels
+                    ],
                   ),
-                  const SizedBox(height: 8.0),
-                  Text(getLabel(index)), // Use different labels
-                ],
+                ),
               ),
             );
           }),
@@ -57,34 +64,36 @@ class HomeScreen extends StatelessWidget {
         return const CipherPage();
       case 3:
         return const BinaryToWordPage();
+      case 4:
+        return const ProgrammerCalculator();
       default:
         return const HomeScreen();
     }
   }
 
-  IconData getIcon(int index) {
-    // Return different icons based on index
+  String getImagePath(int index) {
+    // Return different image paths based on index
     switch (index) {
       case 0:
-        return Icons.qr_code_scanner;
+        return 'assets/icons/qr_scanner.png';
       case 1:
-        return Icons.qr_code;
+        return 'assets/icons/qr_generator.png';
       case 2:
-        return Icons.code;
+        return 'assets/icons/cipher.png';
       case 3:
-        return Icons.terminal_outlined;
+        return 'assets/icons/binary.png';
       case 4:
-        return Icons.person;
+        return 'assets/icons/programmer_cal.png';
       case 5:
-        return Icons.map;
+        return 'assets/icons/cipher.png';
       case 6:
-        return Icons.camera;
+        return 'assets/icons/cipher.png';
       case 7:
-        return Icons.phone;
+        return 'assets/icons/cipher.png';
       case 8:
-        return Icons.email;
+        return 'assets/icons/cipher.png';
       default:
-        return Icons.ac_unit;
+        return 'assets/icons/cipher.png';
     }
   }
 
@@ -100,7 +109,7 @@ class HomeScreen extends StatelessWidget {
       case 3:
         return 'Binary';
       case 4:
-        return 'Profile';
+        return 'Prog Cal';
       case 5:
         return 'Map';
       case 6:
