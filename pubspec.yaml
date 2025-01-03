@@ -70,6 +70,7 @@ flutter:
     - assets/icons/programmer_cal.png
     - assets/icons/measurements.png
     - assets/icons/weights.png
+    - assets/icons/heights.png
 
   #   - images/a_dot_ham.jpeg
 
