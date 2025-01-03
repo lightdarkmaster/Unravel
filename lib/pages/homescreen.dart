@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:unravel/pages/binary_to_word.dart';
 import 'package:unravel/pages/cipher.dart';
+import 'package:unravel/pages/measurements.dart';
 import 'package:unravel/pages/programmer_cal.dart';
 import 'package:unravel/pages/qr_code_generator.dart';
 import 'package:unravel/pages/qr_code_reader.dart';
+import 'package:unravel/pages/weights.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -66,6 +68,10 @@ class HomeScreen extends StatelessWidget {
         return const BinaryToWordPage();
       case 4:
         return const ProgrammerCalculator();
+      case 5:
+        return const MeasurementsPage();
+      case 6:
+        return const WeightConverterPage();
       default:
         return const HomeScreen();
     }
@@ -85,9 +91,9 @@ class HomeScreen extends StatelessWidget {
       case 4:
         return 'assets/icons/programmer_cal.png';
       case 5:
-        return 'assets/icons/cipher.png';
+        return 'assets/icons/measurements.png';
       case 6:
-        return 'assets/icons/cipher.png';
+        return 'assets/icons/weights.png';
       case 7:
         return 'assets/icons/cipher.png';
       case 8:
@@ -111,9 +117,9 @@ class HomeScreen extends StatelessWidget {
       case 4:
         return 'Prog Cal';
       case 5:
-        return 'Map';
+        return 'Measurements';
       case 6:
-        return 'Camera';
+        return 'Weights';
       case 7:
         return 'Phone';
       case 8:
