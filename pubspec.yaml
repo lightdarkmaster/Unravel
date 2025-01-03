@@ -68,6 +68,8 @@ flutter:
     - assets/icons/binary.png
     - assets/icons/cipher.png
     - assets/icons/programmer_cal.png
+    - assets/icons/measurements.png
+    - assets/icons/weights.png
 
   #   - images/a_dot_ham.jpeg
 
