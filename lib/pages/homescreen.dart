@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:unravel/pages/binary_to_word.dart';
 import 'package:unravel/pages/cipher.dart';
+import 'package:unravel/pages/heights.dart';
 import 'package:unravel/pages/measurements.dart';
 import 'package:unravel/pages/programmer_cal.dart';
 import 'package:unravel/pages/qr_code_generator.dart';
@@ -72,6 +73,8 @@ class HomeScreen extends StatelessWidget {
         return const MeasurementsPage();
       case 6:
         return const WeightConverterPage();
+      case 7:
+        return const HeightConverterPage();
       default:
         return const HomeScreen();
     }
@@ -95,7 +98,7 @@ class HomeScreen extends StatelessWidget {
       case 6:
         return 'assets/icons/weights.png';
       case 7:
-        return 'assets/icons/cipher.png';
+        return 'assets/icons/heights.png';
       case 8:
         return 'assets/icons/cipher.png';
       default:
@@ -121,7 +124,7 @@ class HomeScreen extends StatelessWidget {
       case 6:
         return 'Weights';
       case 7:
-        return 'Phone';
+        return 'Heights';
       case 8:
         return 'Email';
       default:
